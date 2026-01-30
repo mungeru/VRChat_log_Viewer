@@ -53,7 +53,7 @@ Claude
 
 ```
 vrchat_log_viewer/
-├── vrchat_log_viewer_modular.py  # メインアプリケーション
+├── start.py  # メインアプリケーション
 ├── constants.py                   # 定数定義
 ├── models.py                      # データモデル
 ├── utils.py                       # ユーティリティ
@@ -66,7 +66,7 @@ vrchat_log_viewer/
 
 ### 起動方法
 ```bash
-python vrchat_log_viewer_modular.py
+python start.py
 ```
 
 ### 初回起動時
