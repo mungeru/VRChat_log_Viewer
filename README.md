@@ -10,7 +10,7 @@ VRChatのログファイルを快適に閲覧・管理できる高機能ビュ�
 探してもなさそうだったので全部AIに話題振って作りました
 100% AI 作です
 使用AI
-ChatFPT
+ChatGPT
 Gemini
 Claude
 
