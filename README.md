@@ -7,6 +7,12 @@ VRChatのログファイルを快適に閲覧・管理できる高機能ビュ�
 ![License](https://img.shields.io/badge/license-MIT-orange)
 
 ---
+探してもなさそうだったので全部AIに話題振って作りました
+100% AI 作です
+使用AI
+ChatFPT
+Gemini
+Claude
 
 ## ✨ 主な機能
 
