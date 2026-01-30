@@ -14,6 +14,14 @@ from constants import (
     ABOUT_TEXT
 )
 
+# 仮想スクロールビューアーをインポート
+try:
+    from virtual_log_viewer import VirtualLogViewerWithHeader
+    VIRTUAL_SCROLL_AVAILABLE = True
+except ImportError:
+    VIRTUAL_SCROLL_AVAILABLE = False
+    print("Warning: virtual_log_viewer.py が見つかりません。通常のTreeviewを使用します。")
+
 
 class UIBuilder:
     """UI構築を担当するクラス"""
@@ -172,8 +180,24 @@ class UIBuilder:
         return widgets
     
     @staticmethod
-    def setup_log_tree(parent: tk.Widget, callbacks: Dict[str, Callable]) -> ttk.Treeview:
-        """ログツリービューを構築"""
+    def setup_log_tree(parent: tk.Widget, callbacks: Dict[str, Callable]):
+        """ログツリービューを構築（仮想スクロール対応）"""
+        if VIRTUAL_SCROLL_AVAILABLE:
+            # 仮想スクロール版
+            log_viewer = VirtualLogViewerWithHeader(
+                parent,
+                on_double_click=callbacks.get('on_log_double_click'),
+                on_right_click=callbacks.get('show_log_context_menu')
+            )
+            log_viewer.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+            return log_viewer
+        else:
+            # 従来のTreeview版（フォールバック）
+            return UIBuilder._setup_log_tree_fallback(parent, callbacks)
+    
+    @staticmethod
+    def _setup_log_tree_fallback(parent: tk.Widget, callbacks: Dict[str, Callable]) -> ttk.Treeview:
+        """ログツリービューを構築（従来版・フォールバック）"""
         log_container = ttk.Frame(parent)
         log_container.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         

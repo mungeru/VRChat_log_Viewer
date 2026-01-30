@@ -19,7 +19,6 @@ GROUP_COLLAPSE_THRESHOLD = 3  # グループ化する最小行数
 BATCH_SIZE = 100  # バッチ処理のサイズ
 AUTO_UPDATE_INTERVAL = 3000  # 自動更新間隔（ミリ秒）
 LARGE_FILE_THRESHOLD_MB = 50  # 大容量ファイル警告の閾値（MB）
-RESIZE_DEBOUNCE_DELAY = 300  # ウィンドウリサイズのデバウンス遅延（ミリ秒）
 
 # ==================== エンコーディング設定 ====================
 ENCODINGS = ['utf-8', 'utf-8-sig', 'cp932', 'shift-jis']
