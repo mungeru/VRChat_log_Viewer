@@ -1,0 +1,22 @@
+{
+  "export_extended": {
+    "id": "export_extended",
+    "name": "エクスポート拡張",
+    "version": "1.0.0",
+    "author": "サンプル作者",
+    "description": "HTML/Markdownエクスポート機能を追加",
+    "install_date": "2026-02-02T15:01:45.749302",
+    "enabled": true,
+    "file_path": "F:\\作成一覧\\VRChatLogViewer_v2.1\\lib\\plugins\\export_extended.py"
+  },
+  "log_statistics": {
+    "id": "log_statistics",
+    "name": "ログ統計",
+    "version": "1.0.0",
+    "author": "サンプル作者",
+    "description": "ログの統計情報を表示します",
+    "install_date": "2026-02-02T15:01:45.750566",
+    "enabled": true,
+    "file_path": "F:\\作成一覧\\VRChatLogViewer_v2.1\\lib\\plugins\\log_statistics.py"
+  }
+}
